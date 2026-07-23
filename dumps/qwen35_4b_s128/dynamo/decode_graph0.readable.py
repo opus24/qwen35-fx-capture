@@ -8643,7 +8643,7 @@ class GraphModule(torch.nn.Module):
         # File: /root/real_root/qwen35_fx_capture/.venv/lib/python3.10/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py:754 in forward, code: return output.type_as(x)
         hidden_states_240: "bf16[1, 1, 2560]" = output_185.type_as(hidden_states_239);  output_185 = hidden_states_239 = None
         
-        # File: /root/real_root/qwen35_fx_capture/capture_qwen35_fx.py:346 in forward, code: past_key_values=past_key_values,
+        # File: /root/real_root/qwen35_fx_capture/capture_qwen35_fx.py:358 in forward, code: hidden = self.lm_head(hidden[:, -1:, :])
         getitem_348: "bf16[1, 1, 2560]" = hidden_states_240[(slice(None, None, None), slice(-1, None, None), slice(None, None, None))];  hidden_states_240 = None
         hidden: "bf16[1, 1, 248320]" = torch._C._nn.linear(getitem_348, l_self_modules_text_model_modules_embed_tokens_parameters_weight_, None);  getitem_348 = l_self_modules_text_model_modules_embed_tokens_parameters_weight_ = None
         return (hidden, values, keys, values_1, keys_1, values_2, keys_2, values_3, keys_3, values_4, keys_4, values_5, keys_5, values_6, keys_6, values_7, keys_7)

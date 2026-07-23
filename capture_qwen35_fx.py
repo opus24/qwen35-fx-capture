@@ -126,6 +126,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="also run torch._dynamo.explain() and write a graph-break report",
     )
     p.add_argument(
+        "--require-fla",
+        action="store_true",
+        help="abort unless the flash-linear-attention fast path is actually active "
+        "(needs a CUDA GPU + fla>=0.2.2); prevents mislabeling a torch-fallback dump as FLA",
+    )
+    p.add_argument(
         "--to-folder",
         action="store_true",
         help="also emit gm.to_folder() re-loadable modules (large: writes weights)",
@@ -355,6 +361,48 @@ def build_module(args):
     return TextDecoderForCapture().eval(), text_config
 
 
+def _impl_name(fn) -> str:
+    """'module.qualname' of whatever callable the model actually bound."""
+    if fn is None:
+        return "none"
+    inner = getattr(fn, "__wrapped__", fn)
+    return f"{getattr(inner, '__module__', '?')}.{getattr(inner, '__qualname__', repr(inner))}"
+
+
+def describe_kernel_path(module) -> dict:
+    """Which linear-attention kernels this model will actually trace.
+
+    Qwen3.5 picks per-symbol at import time (`fla_fn or torch_fn`), so the fast path
+    can be partially active: fla delta rule + torch conv when causal-conv1d is missing.
+    Reported so a dump can never be silently mislabeled.
+    """
+    import torch
+
+    status = {"cuda_available": torch.cuda.is_available()}
+    try:
+        from transformers.utils.import_utils import (
+            is_causal_conv1d_available,
+            is_flash_linear_attention_available,
+        )
+
+        status["fla_available"] = bool(is_flash_linear_attention_available())
+        status["causal_conv1d_available"] = bool(is_causal_conv1d_available())
+    except Exception as exc:  # non-qwen3.5 model or older transformers
+        status["availability_error"] = str(exc)[:200]
+
+    layer = next(
+        (m for m in module.modules() if hasattr(m, "chunk_gated_delta_rule")),
+        None,
+    )
+    if layer is not None:
+        status["delta_rule_chunk"] = _impl_name(layer.chunk_gated_delta_rule)
+        status["delta_rule_recurrent"] = _impl_name(layer.recurrent_gated_delta_rule)
+        status["conv1d_fn"] = _impl_name(layer.causal_conv1d_fn)
+        status["conv1d_update"] = _impl_name(layer.causal_conv1d_update)
+        status["fla_delta_rule_active"] = layer.chunk_gated_delta_rule.__module__.startswith("fla")
+    return status
+
+
 def make_cache(text_config, batch: int):
     from transformers import DynamicCache
 
@@ -443,9 +491,10 @@ def capture_step(module, args, text_config, step: str, out_root: Path) -> dict:
     }
 
 
-def write_report(out_root: Path, args, results: list[dict], text_config) -> None:
+def write_report(out_root: Path, args, results: list[dict], text_config, kernel_path: dict) -> None:
     report = {
         "model": args.model,
+        "kernel_path": kernel_path,
         "weights": args.weights,
         "dtype": args.dtype,
         "attn_impl": args.attn_impl,
@@ -466,6 +515,14 @@ def write_report(out_root: Path, args, results: list[dict], text_config) -> None
         f"layers={text_config.num_hidden_layers} backend={args.backend} "
         f"decomp={args.aten_decomp} dynamic={args.dynamic}"
     )
+    lines += [
+        "",
+        "## linear-attention kernel path",
+        "",
+        "| | |",
+        "| --- | --- |",
+    ]
+    lines += [f"| {k} | `{v}` |" for k, v in kernel_path.items()]
     for res in results:
         lines += [
             "",
@@ -528,13 +585,33 @@ def main(argv: list[str] | None = None) -> int:
         flush=True,
     )
 
+    kernel_path = describe_kernel_path(module)
+    print(
+        "kernel path: delta_rule={} | conv={} | cuda={} fla={} causal_conv1d={}".format(
+            kernel_path.get("delta_rule_chunk", "?"),
+            kernel_path.get("conv1d_fn", "?"),
+            kernel_path.get("cuda_available"),
+            kernel_path.get("fla_available"),
+            kernel_path.get("causal_conv1d_available"),
+        ),
+        flush=True,
+    )
+    if args.require_fla and not kernel_path.get("fla_delta_rule_active"):
+        raise SystemExit(
+            "--require-fla: the flash-linear-attention fast path is NOT active "
+            f"(delta rule = {kernel_path.get('delta_rule_chunk')}). "
+            "transformers gates it on is_torch_cuda_available() and fla>=0.2.2, so this "
+            "needs a CUDA GPU with `pip install flash-linear-attention`. Aborting instead "
+            "of writing a torch-fallback dump under an FLA name."
+        )
+
     steps = ["prefill", "decode"] if args.mode == "both" else [args.mode]
     results = []
     for step in steps:
         torch._dynamo.reset()
         results.append(capture_step(module, args, text_config, step, out_root))
 
-    write_report(out_root, args, results, text_config)
+    write_report(out_root, args, results, text_config, kernel_path)
     print(f"\nreport: {out_root / 'report.md'}", flush=True)
     return 0
 
