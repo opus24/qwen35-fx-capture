@@ -2,19 +2,6 @@
 
 weights=random dtype=bfloat16 attn=eager layers=32 backend=dump decomp=core dynamic=false
 
-## linear-attention kernel path
-
-| | |
-| --- | --- |
-| cuda_available | `False` |
-| fla_available | `False` |
-| causal_conv1d_available | `False` |
-| delta_rule_chunk | `transformers.models.qwen3_5.modeling_qwen3_5.torch_chunk_gated_delta_rule` |
-| delta_rule_recurrent | `transformers.models.qwen3_5.modeling_qwen3_5.torch_recurrent_gated_delta_rule` |
-| conv1d_fn | `none` |
-| conv1d_update | `transformers.models.qwen3_5.modeling_qwen3_5.torch_causal_conv1d_update` |
-| fla_delta_rule_active | `False` |
-
 ## prefill (batch=1 seq_len=128 past=0)
 
 | level | graph | nodes | placeholders | call_function |

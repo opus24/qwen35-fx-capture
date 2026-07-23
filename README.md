@@ -44,8 +44,8 @@ Qwen3.5는 하이브리드 모델이라 `Qwen3_5GatedDeltaNet`이 `seq_len == 1`
 | ATen 분해 | `core_aten_decompositions()` (1013 룰) |
 | graph break | **0** — `--fullgraph` 통과, `torch._dynamo.explain()` = `Graph Count: 1, Break Count: 0` |
 | 실행 환경 | CPU / torch 2.10.0 / transformers 5.14.1 / python 3.10 |
-| linear-attn 커널 | **torch 참조 구현** (`torch_chunk_gated_delta_rule` / `torch_recurrent_gated_delta_rule`) — FLA fast path **미적용**. prefill 그래프 크기에 결정적이다 ([아래](#fla-fast-path-버전으로-뽑으려면), [`docs/analysis.md`](docs/analysis.md)) |
-| 소요 시간 | 모델 빌드 267s / prefill 캡처 203s / decode 캡처 39s (48코어 CPU, 부하에 따라 변동) |
+| `fla`, `causal-conv1d` | **미설치** → 순수 torch 참조 구현으로 폴백 (prefill 그래프 크기에 결정적, [`docs/analysis.md`](docs/analysis.md) 참고) |
+| 소요 시간 | 모델 빌드 249s / prefill 캡처 148s / decode 캡처 32s |
 
 ---
 
@@ -63,43 +63,6 @@ python compare_graphs.py dumps/qwen35_4b_s128 --level aten --out dumps/qwen35_4b
 
 빠른 스모크는 `--layers 4 --vocab-size 4096 --seq-len 32` (수십 초).
 그 외 옵션은 `--help` 또는 [`docs/design.md`](docs/design.md).
-
-### FLA fast path 버전으로 뽑으려면
-
-이 저장소의 덤프는 **FLA(flash-linear-attention) fast path가 꺼진** 상태다. Qwen3.5는 커널을
-import 시점에 `fla_fn or torch_fn`으로 고르는데(`modeling_qwen3_5.py:421-424`), transformers가
-FLA 사용 여부를 **`is_torch_cuda_available()`으로 게이팅**하기 때문에 **CUDA GPU가 있어야만** 켜진다:
-
-```python
-# transformers/utils/import_utils.py
-def is_flash_linear_attention_available():
-    is_available, fla_version = _is_package_available("fla", return_version=True)
-    return is_torch_cuda_available() and is_available and version.parse(fla_version) >= version.parse("0.2.2")
-```
-
-GPU 머신에서 아래처럼 하면 FLA 버전 덤프가 나온다:
-
-```bash
-pip install flash-linear-attention        # delta rule 커널 (필수)
-pip install causal-conv1d                 # conv 커널 (선택, CUDA 빌드 필요)
-
-python capture_qwen35_fx.py --seq-len 128 --mode both --require-fla \
-    --out dumps/qwen35_4b_s128_fla
-```
-
-`--require-fla`는 fast path가 실제로 활성화되지 않았으면 **덤프를 쓰지 않고 즉시 중단**한다
-(torch 폴백 결과가 FLA 이름으로 잘못 저장되는 걸 막는다). 실제로 어떤 커널이 잡혔는지는
-매 실행 시 `kernel path:` 줄로 출력되고 `report.md` / `report.json`에도 기록된다.
-
-`causal-conv1d` 없이 FLA만 설치해도 **delta rule 커널만 교체**된다 (conv는 torch 경로 유지) —
-심볼별 `or` 폴백이라 부분 활성화가 가능하다. prefill 그래프의 88.6%가 delta rule이므로
-FLA만으로도 그래프는 크게 달라진다.
-
-> 환경 메모: 이 저장소를 만든 CPU 전용 머신(python 3.10 / torch 2.10 / triton 3.6.0)에서는
-> `flash-linear-attention==0.5.1`이 **import 단계에서 실패**했다
-> (`fla/ops/simple_gla/parallel.py` → `triton/runtime/jit.py` `AttributeError: 'NoneType' object has no attribute 'start'`).
-> fla는 python 3.11 이상을 권장한다. GPU 머신에서 FLA 버전을 뽑을 때 python/triton/fla 조합을
-> 먼저 맞춰야 할 수 있다.
 
 ---
 

@@ -42,12 +42,6 @@ prefill 그래프에는 `chunk_gated_delta_rule`이, decode 그래프에는 `rec
 decode 캡처는 캐시가 채워져 있어야 의미가 있으므로, **eager로 prefill을 먼저 한 번 돌려 `DynamicCache`를
 채운 뒤** 1토큰을 컴파일해 통과시킨다.
 
-여기서 `chunk_gated_delta_rule` / `recurrent_gated_delta_rule` / conv가 **FLA 커널이냐 torch 참조
-구현이냐**에 따라 그래프가 크게 달라진다. 선택은 import 시점에 심볼별로 `fla_fn or torch_fn`으로
-정해지고(`modeling_qwen3_5.py:421-424`), FLA는 CUDA GPU에서만 켜진다. 어느 쪽이 잡혔는지는
-`describe_kernel_path()`가 실행 시 출력하고 `report.md` / `report.json`에도 남긴다
-([README](../README.md#fla-fast-path-버전으로-뽑으려면)).
-
 ---
 
 ## 2. 무엇을 컴파일하나
@@ -130,8 +124,6 @@ ir_pre_fusion.txt        ir_post_fusion.txt          output_code.py
 - `--layers N`, `--vocab-size V` — 스모크용 축소
 - `--fullgraph` — graph break가 있으면 실패시킴
 - `--weights real` — 실제 체크포인트 로드
-- `--require-fla` — FLA fast path가 실제로 켜져 있지 않으면 덤프를 쓰지 않고 중단
-  (torch 폴백 결과가 FLA 이름으로 저장되는 사고 방지). [README 참고](../README.md#fla-fast-path-버전으로-뽑으려면)
 - `--to-folder` — `gm.to_folder()`로 재로드 가능한 모듈까지 (가중치를 쓰므로 큼)
 
 > `--layers N`으로 줄일 때 스크립트가 **full_attention을 최소 1개 유지**한다. 전부 linear만 남으면

@@ -55684,7 +55684,7 @@ class <lambda>(torch.nn.Module):
         # File: /root/real_root/qwen35_fx_capture/.venv/lib/python3.10/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py:754 in forward, code: return output.type_as(x)
         _to_copy_662: "bf16[1, 128, 2560]" = torch.ops.aten._to_copy.default(mul_2339, dtype = torch.bfloat16, layout = torch.strided, device = device(type='cpu'));  mul_2339 = None
         
-        # File: /root/real_root/qwen35_fx_capture/capture_qwen35_fx.py:358 in forward, code: hidden = self.lm_head(hidden[:, -1:, :])
+        # File: /root/real_root/qwen35_fx_capture/capture_qwen35_fx.py:346 in forward, code: past_key_values=past_key_values,
         slice_15122: "bf16[1, 1, 2560]" = torch.ops.aten.slice.Tensor(_to_copy_662, 1, -1, 9223372036854775807);  _to_copy_662 = None
         permute_637: "bf16[2560, 248320]" = torch.ops.aten.permute.default(arg1_1, [1, 0]);  arg1_1 = None
         view_3577: "bf16[1, 2560]" = torch.ops.aten.view.default(slice_15122, [1, 2560]);  slice_15122 = None

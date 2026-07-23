@@ -159,10 +159,6 @@ mul/sum + 슬라이스 대입(→ `slice_scatter`)이 생기니 layer당 약 1,5
 - **랜덤 가중치**(기본). 값 검증이 필요하면 `--weights real`.
 - **batch 1, static shape** 캡처다. 다른 seq_len은 `--seq-len`으로 다시 뽑아야 한다
   (`--dynamic true`로 심볼릭 캡처도 되지만 커널 작업엔 static이 낫다).
-- **이 덤프는 FLA fast path가 꺼진 버전이다.** 켜면 prefill 그래프가 완전히 달라진다 — 위 (c)에서
-  본 36,840 노드(88.6%)짜리 언롤이 FLA의 Triton 커널 호출 몇 개로 대체되므로, prefill 그래프가
-  decode와 비슷한 규모로 줄어들 가능성이 크다 (대신 커널 내부는 그래프에서 안 보인다).
-  FLA는 transformers가 `is_torch_cuda_available()`로 게이팅하므로 **CUDA GPU에서만** 켜진다.
-  뽑는 법은 [README의 "FLA fast path 버전으로 뽑으려면"](../README.md#fla-fast-path-버전으로-뽑으려면).
-  실행 시 `kernel path:` 출력과 `report.md`의 kernel path 표로 어느 구현이 잡혔는지 항상 확인할 수 있다.
+- **`fla` / `causal-conv1d`를 설치하면 prefill 그래프가 완전히 달라진다** (custom op 하나로 뭉치거나
+  graph break가 생길 수 있음). 이 덤프는 "설치 안 된 상태 = 전부 ATen으로 보이는" 버전이다.
 - vision 타워는 캡처 대상이 아니다 (텍스트 경로만).

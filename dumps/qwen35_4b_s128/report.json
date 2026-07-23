@@ -1,15 +1,5 @@
 {
   "model": "Qwen/Qwen3.5-4B",
-  "kernel_path": {
-    "cuda_available": false,
-    "fla_available": false,
-    "causal_conv1d_available": false,
-    "delta_rule_chunk": "transformers.models.qwen3_5.modeling_qwen3_5.torch_chunk_gated_delta_rule",
-    "delta_rule_recurrent": "transformers.models.qwen3_5.modeling_qwen3_5.torch_recurrent_gated_delta_rule",
-    "conv1d_fn": "none",
-    "conv1d_update": "transformers.models.qwen3_5.modeling_qwen3_5.torch_causal_conv1d_update",
-    "fla_delta_rule_active": false
-  },
   "weights": "random",
   "dtype": "bfloat16",
   "attn_impl": "eager",
@@ -64,7 +54,7 @@
         1,
         248320
       ],
-      "compile_and_run_seconds": 202.84,
+      "compile_and_run_seconds": 147.7,
       "graphs": [
         {
           "level": "dynamo",
@@ -198,7 +188,7 @@
         1,
         248320
       ],
-      "compile_and_run_seconds": 39.45,
+      "compile_and_run_seconds": 31.96,
       "graphs": [
         {
           "level": "dynamo",
