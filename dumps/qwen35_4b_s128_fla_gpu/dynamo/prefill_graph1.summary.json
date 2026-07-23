@@ -1,0 +1,20 @@
+{
+  "name": "prefill_graph1",
+  "dir": "/root/real_root/qwen35_fx_capture/dumps/qwen35_4b_s128_fla_gpu/dynamo",
+  "num_nodes": 25,
+  "num_placeholders": 2,
+  "num_call_function": 11,
+  "op_counts": {
+    "_operator.getitem": 5,
+    "float": 4,
+    "to": 3,
+    "_operator.setitem": 2,
+    "_operator.mul": 2,
+    "expand": 1,
+    "_operator.matmul": 1,
+    "transpose": 1,
+    "torch.cat": 1,
+    "cos": 1,
+    "sin": 1
+  }
+}

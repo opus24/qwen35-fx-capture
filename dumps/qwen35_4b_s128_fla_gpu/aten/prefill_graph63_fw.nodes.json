@@ -1,0 +1,137 @@
+[
+  {
+    "name": "arg0_1",
+    "op": "placeholder",
+    "target": "placeholder",
+    "args": [],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "2560"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "arg1_1",
+    "op": "placeholder",
+    "target": "placeholder",
+    "args": [],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "248320",
+        "2560"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "slice_1",
+    "op": "call_function",
+    "target": "torch._ops.aten.slice.Tensor",
+    "args": [
+      "arg0_1",
+      "1",
+      "-1",
+      "9223372036854775807"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "1",
+        "2560"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "permute",
+    "op": "call_function",
+    "target": "torch._ops.aten.permute.default",
+    "args": [
+      "arg1_1",
+      "[1, 0]"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "2560",
+        "248320"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "view",
+    "op": "call_function",
+    "target": "torch._ops.aten.view.default",
+    "args": [
+      "slice_1",
+      "[1, 2560]"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "2560"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "mm",
+    "op": "call_function",
+    "target": "torch._ops.aten.mm.default",
+    "args": [
+      "view",
+      "permute"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "248320"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "view_1",
+    "op": "call_function",
+    "target": "torch._ops.aten.view.default",
+    "args": [
+      "mm",
+      "[1, 1, 248320]"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "1",
+        "248320"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "output",
+    "op": "output",
+    "target": "output",
+    "args": [
+      "(view_1,)"
+    ],
+    "kwargs": {},
+    "meta": null
+  }
+]

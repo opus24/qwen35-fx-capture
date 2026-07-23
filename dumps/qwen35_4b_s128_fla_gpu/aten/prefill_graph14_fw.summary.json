@@ -1,0 +1,18 @@
+{
+  "name": "prefill_graph14_fw",
+  "dir": "/root/real_root/qwen35_fx_capture/dumps/qwen35_4b_s128_fla_gpu/aten",
+  "num_nodes": 22,
+  "num_placeholders": 5,
+  "num_call_function": 16,
+  "op_counts": {
+    "torch._ops.aten.view.default": 8,
+    "torch._ops.aten.full_like.default": 1,
+    "torch._ops.aten.copy.default": 1,
+    "torch._ops.aten.empty_permuted.default": 1,
+    "torch._ops.aten.empty.memory_format": 1,
+    "torch.ops.higher_order.triton_kernel_wrapper_functional": 1,
+    "_operator.getitem": 1,
+    "torch._ops.aten.permute.default": 1,
+    "torch._ops.aten.mm.default": 1
+  }
+}

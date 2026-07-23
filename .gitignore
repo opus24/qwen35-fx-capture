@@ -1,9 +1,18 @@
 .venv/
+.venv-fla/
 __pycache__/
 *.pyc
 
 # readable.py와 내용이 겹치는데 57MB라 저장소에서만 제외 (실행하면 생성된다)
 dumps/**/*.tabular.txt
+
+# 커널 간 수치 비교용 로짓 (재실행하면 생성된다)
+dumps/**/*.pt
+
+# torch-커널 GPU 베이스라인: 그래프가 CPU 덤프(qwen35_4b_s128/)와 노드 단위로 동일하다.
+# 값이 있는 건 report(레이턴시)뿐이라 무거운 그래프 파일은 제외한다.
+dumps/qwen35_4b_s128_torch_gpu/dynamo/
+dumps/qwen35_4b_s128_torch_gpu/aten/
 
 # 스모크 / 덤프방식 검증용 임시 산출물
 dumps/opt_check/

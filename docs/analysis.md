@@ -159,6 +159,8 @@ mul/sum + 슬라이스 대입(→ `slice_scatter`)이 생기니 layer당 약 1,5
 - **랜덤 가중치**(기본). 값 검증이 필요하면 `--weights real`.
 - **batch 1, static shape** 캡처다. 다른 seq_len은 `--seq-len`으로 다시 뽑아야 한다
   (`--dynamic true`로 심볼릭 캡처도 되지만 커널 작업엔 static이 낫다).
-- **`fla` / `causal-conv1d`를 설치하면 prefill 그래프가 완전히 달라진다** (custom op 하나로 뭉치거나
-  graph break가 생길 수 있음). 이 덤프는 "설치 안 된 상태 = 전부 ATen으로 보이는" 버전이다.
+- **이 덤프는 FLA fast path가 꺼진 버전이다** — "전부 ATen으로 보이는" 상태. GPU에서 켜고 실제로
+  뽑아 보니 위 (c)의 36,840노드(88.6%) 언롤이 통째로 사라지는 대신 **prefill이 graph break 63개로
+  쪼개졌다**(`chunk_gated_delta_rule`이 `@torch.compiler.disable`). decode는 반대로 break 0으로
+  잡히고 Triton 커널이 그래프 안에 노드로 들어온다. 측정치와 원인은 [`fla_gpu.md`](fla_gpu.md).
 - vision 타워는 캡처 대상이 아니다 (텍스트 경로만).

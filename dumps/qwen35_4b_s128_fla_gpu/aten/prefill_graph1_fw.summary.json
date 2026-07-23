@@ -1,0 +1,26 @@
+{
+  "name": "prefill_graph1_fw",
+  "dir": "/root/real_root/qwen35_fx_capture/dumps/qwen35_4b_s128_fla_gpu/aten",
+  "num_nodes": 65,
+  "num_placeholders": 2,
+  "num_call_function": 62,
+  "op_counts": {
+    "torch._ops.aten.view.default": 12,
+    "torch._ops.aten.permute.default": 8,
+    "torch._ops.aten.select.int": 7,
+    "torch._ops.aten.unsqueeze.default": 6,
+    "torch._ops.aten.expand.default": 5,
+    "torch._ops.aten._to_copy.default": 4,
+    "torch._ops.aten.slice.Tensor": 4,
+    "torch._ops.aten.copy.default": 2,
+    "torch._ops.aten.slice_scatter.default": 2,
+    "torch._ops.aten.arange.start_step": 2,
+    "torch._ops.aten.eq.Scalar": 2,
+    "torch._ops.aten.where.self": 2,
+    "torch._ops.aten.mul.Tensor": 2,
+    "torch._ops.aten.bmm.default": 1,
+    "torch._ops.aten.cat.default": 1,
+    "torch._ops.aten.cos.default": 1,
+    "torch._ops.aten.sin.default": 1
+  }
+}

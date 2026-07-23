@@ -1,0 +1,19 @@
+{
+  "name": "prefill_graph7_fw",
+  "dir": "/root/real_root/qwen35_fx_capture/dumps/qwen35_4b_s128_fla_gpu/aten",
+  "num_nodes": 36,
+  "num_placeholders": 6,
+  "num_call_function": 29,
+  "op_counts": {
+    "torch._ops.aten.view.default": 6,
+    "torch._ops.aten._to_copy.default": 5,
+    "torch._ops.aten.add.Tensor": 4,
+    "torch._ops.aten.mul.Tensor": 4,
+    "torch._ops.aten.permute.default": 3,
+    "torch._ops.aten.mm.default": 3,
+    "torch._ops.aten.pow.Tensor_Scalar": 1,
+    "torch._ops.aten.mean.dim": 1,
+    "torch._ops.aten.rsqrt.default": 1,
+    "torch._ops.aten.sigmoid.default": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "prefill_graph54_fw",
+  "dir": "/root/real_root/qwen35_fx_capture/dumps/qwen35_4b_s128_fla_gpu/aten",
+  "num_nodes": 163,
+  "num_placeholders": 15,
+  "num_call_function": 145,
+  "op_counts": {
+    "torch._ops.aten.view.default": 28,
+    "torch._ops.aten._to_copy.default": 16,
+    "torch._ops.aten.mul.Tensor": 16,
+    "torch._ops.aten.add.Tensor": 13,
+    "torch._ops.aten.permute.default": 12,
+    "torch._ops.aten.slice.Tensor": 8,
+    "torch._ops.aten.mm.default": 7,
+    "torch._ops.aten.cat.default": 6,
+    "torch._ops.aten.expand.default": 6,
+    "torch._ops.aten.clone.default": 5,
+    "torch._ops.aten.pow.Tensor_Scalar": 4,
+    "torch._ops.aten.mean.dim": 4,
+    "torch._ops.aten.rsqrt.default": 4,
+    "torch._ops.aten.unsqueeze.default": 4,
+    "_operator.getitem": 2,
+    "torch._ops.aten.neg.default": 2,
+    "torch._ops.aten.lift_fresh_copy.default": 2,
+    "torch._ops.aten.bmm.default": 2,
+    "torch._ops.aten.sigmoid.default": 2,
+    "torch._ops.aten.split_with_sizes.default": 1,
+    "torch._ops.aten._softmax.default": 1
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "index": 0,
+    "shape": [
+      "1",
+      "128",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 1,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  }
+]

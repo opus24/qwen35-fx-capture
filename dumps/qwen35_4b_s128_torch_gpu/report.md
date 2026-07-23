@@ -1,0 +1,112 @@
+# FX capture report — Qwen/Qwen3.5-4B (torch kernels, cuda)
+
+weights=random dtype=bfloat16 attn=eager layers=32 decomp=core dynamic=false
+
+## linear-attention kernel path
+
+| | |
+| --- | --- |
+| requested | `torch` |
+| torch_version | `2.10.0+cu128` |
+| cuda_available | `True` |
+| gpu | `NVIDIA A40` |
+| transformers_version | `5.14.1` |
+| fla_available | `False` |
+| causal_conv1d_available | `False` |
+| fla_version | `0.5.1` |
+| delta_rule_chunk | `transformers.models.qwen3_5.modeling_qwen3_5.torch_chunk_gated_delta_rule` |
+| delta_rule_recurrent | `transformers.models.qwen3_5.modeling_qwen3_5.torch_recurrent_gated_delta_rule` |
+| conv1d_fn | `none` |
+| conv1d_update | `transformers.models.qwen3_5.modeling_qwen3_5.torch_causal_conv1d_update` |
+| gated_rmsnorm | `transformers.models.qwen3_5.modeling_qwen3_5.Qwen3_5RMSNormGated` |
+| fla_delta_rule_active | `False` |
+
+## eager latency (CUDA events)
+
+| step | median ms | mean ms | min ms | notes |
+| --- | --- | --- | --- | --- |
+| prefill (b1 s128) | 195.367 | 219.491 | 188.296 | 655.2 tok/s |
+| decode ×32 (past=128) | 1497.54 | 1497.964 | 1472.944 | **46.798 ms/token** |
+
+peak memory: 8.611 GB
+
+prefill logits: shape=[1, 1, 248320] mean=-0.000897 std=1.010811 absmax=5.0625
+params: numel=4205751296 sum_finite=4043.9586 nonfinite=5
+
+## prefill (batch=1 seq_len=128 past=0)
+
+dynamo: graph_count=1 graph_break_count=0
+
+| level | graph | nodes | placeholders | call_function |
+| --- | --- | --- | --- | --- |
+| dynamo | prefill_graph0 | 19897 | 429 | 11089 |
+| aten | prefill_graph0_fw | 42023 | 429 | 41576 |
+
+### top ops — prefill_graph0_fw
+
+| op | count |
+| --- | --- |
+| torch._ops.aten.slice.Tensor | 6166 |
+| torch._ops.aten.select.int | 5119 |
+| torch._ops.aten.unsqueeze.default | 3693 |
+| torch._ops.aten.view.default | 3478 |
+| torch._ops.aten.clone.default | 3256 |
+| torch._ops.aten.mul.Tensor | 2340 |
+| torch._ops.aten.expand.default | 2287 |
+| torch._ops.aten.add.Tensor | 1980 |
+| torch._ops.aten.arange.start_step | 1756 |
+| torch._ops.aten.where.self | 1659 |
+| torch._ops.aten.copy.default | 1610 |
+| torch._ops.aten.eq.Scalar | 1562 |
+| torch._ops.aten.sum.dim_IntList | 1560 |
+| torch._ops.aten.slice_scatter.default | 1514 |
+| torch._ops.aten._to_copy.default | 663 |
+| torch._ops.aten.permute.default | 609 |
+| torch._ops.aten.bmm.default | 329 |
+| torch._ops.aten.mm.default | 249 |
+| torch._ops.aten.exp.default | 240 |
+| torch._ops.aten.sub.Tensor | 192 |
+| torch._ops.aten.rsqrt.default | 153 |
+| torch._ops.aten.constant_pad_nd.default | 144 |
+| torch._ops.aten.sigmoid.default | 112 |
+| torch._ops.aten.pow.Tensor_Scalar | 105 |
+| torch._ops.aten.mean.dim | 105 |
+
+## decode (batch=1 seq_len=1 past=128)
+
+dynamo: graph_count=1 graph_break_count=0
+
+| level | graph | nodes | placeholders | call_function |
+| --- | --- | --- | --- | --- |
+| dynamo | decode_graph0 | 4561 | 493 | 2097 |
+| aten | decode_graph0_fw | 5783 | 493 | 5288 |
+
+### top ops — decode_graph0_fw
+
+| op | count |
+| --- | --- |
+| torch._ops.aten.view.default | 862 |
+| torch._ops.aten.mul.Tensor | 660 |
+| torch._ops.aten._to_copy.default | 639 |
+| torch._ops.aten.permute.default | 489 |
+| torch._ops.aten.add.Tensor | 372 |
+| torch._ops.aten.unsqueeze.default | 309 |
+| torch._ops.aten.mm.default | 249 |
+| torch._ops.aten.rsqrt.default | 153 |
+| torch._ops.aten.select.int | 151 |
+| torch._ops.aten.expand.default | 127 |
+| torch._ops.aten.slice.Tensor | 118 |
+| torch._ops.aten.sigmoid.default | 112 |
+| torch._ops.aten.pow.Tensor_Scalar | 105 |
+| torch._ops.aten.mean.dim | 105 |
+| torch._ops.aten.sum.dim_IntList | 96 |
+| _operator.getitem | 88 |
+| torch._ops.aten.clone.default | 80 |
+| torch._ops.aten.copy.default | 74 |
+| torch._ops.aten.cat.default | 73 |
+| torch._ops.aten.exp.default | 72 |
+| torch._ops.aten.where.self | 51 |
+| torch._ops.aten.neg.default | 40 |
+| torch._ops.aten.split_with_sizes.default | 32 |
+| torch._ops.aten.arange.start_step | 28 |
+| torch._ops.aten.eq.Scalar | 26 |

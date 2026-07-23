@@ -19,9 +19,16 @@ Qwen3.5는 하이브리드 모델이라 `Qwen3_5GatedDeltaNet`이 `seq_len == 1`
 | **prefill FX 그래프** (42,023 노드 — grep 권장) | [`aten/prefill_graph0_fw.readable.py`](dumps/qwen35_4b_s128/aten/prefill_graph0_fw.readable.py) |
 | 두 그래프 차이 상세 분석 | [`docs/analysis.md`](docs/analysis.md) |
 | 도구 설계 + 덤프 방식 3가지 | [`docs/design.md`](docs/design.md) |
+| **FLA fast path를 켠 GPU 캡처** (그래프가 완전히 달라진다) | [`docs/fla_gpu.md`](docs/fla_gpu.md) |
+| FLA vs torch 커널 비교 리포트 | [`dumps/qwen35_4b_s128_fla_gpu/compare_vs_torch_aten.md`](dumps/qwen35_4b_s128_fla_gpu/compare_vs_torch_aten.md) |
+| **FLA decode 그래프** (break 0, Triton 커널 48노드 포함) | [`aten/decode_graph0_fw.readable.py`](dumps/qwen35_4b_s128_fla_gpu/aten/decode_graph0_fw.readable.py) |
 
 한 줄 결론: **가중치 GEMM(`aten.mm` 249개)은 prefill/decode가 완전히 동일하고 M(토큰 수)만 128 vs 1이다.
 차이는 전부 토큰 축 처리에서 나온다.** 자세한 건 [`docs/analysis.md`](docs/analysis.md).
+
+FLA를 켜면(GPU 전용) 얘기가 달라진다: **prefill은 graph break 63개로 쪼개지고 delta rule이 그래프
+밖으로 나가지만, decode는 break 0으로 Triton 커널까지 그래프 안에 잡힌다.** 갈림길은
+`chunk_gated_delta_rule`에만 붙은 `@torch.compiler.disable` 하나다 — [`docs/fla_gpu.md`](docs/fla_gpu.md).
 
 ---
 
@@ -44,7 +51,7 @@ Qwen3.5는 하이브리드 모델이라 `Qwen3_5GatedDeltaNet`이 `seq_len == 1`
 | ATen 분해 | `core_aten_decompositions()` (1013 룰) |
 | graph break | **0** — `--fullgraph` 통과, `torch._dynamo.explain()` = `Graph Count: 1, Break Count: 0` |
 | 실행 환경 | CPU / torch 2.10.0 / transformers 5.14.1 / python 3.10 |
-| `fla`, `causal-conv1d` | **미설치** → 순수 torch 참조 구현으로 폴백 (prefill 그래프 크기에 결정적, [`docs/analysis.md`](docs/analysis.md) 참고) |
+| linear-attn 커널 | **torch 참조 구현** — FLA fast path **미적용**. prefill 그래프 크기에 결정적이다 ([`docs/analysis.md`](docs/analysis.md), [`docs/fla_gpu.md`](docs/fla_gpu.md)) |
 | 소요 시간 | 모델 빌드 249s / prefill 캡처 148s / decode 캡처 32s |
 
 ---
@@ -63,6 +70,27 @@ python compare_graphs.py dumps/qwen35_4b_s128 --level aten --out dumps/qwen35_4b
 
 빠른 스모크는 `--layers 4 --vocab-size 4096 --seq-len 32` (수십 초).
 그 외 옵션은 `--help` 또는 [`docs/design.md`](docs/design.md).
+
+### FLA fast path 버전 (GPU 전용)
+
+FLA는 transformers가 `is_torch_cuda_available()`로 게이팅하므로 **CUDA GPU에서만** 켜지고,
+켜지면 그래프가 완전히 달라진다. 전용 스크립트는 `capture_qwen35_fx_fla_gpu.py`다
+(`capture_qwen35_fx.py`는 건드리지 않고 직렬화 부분만 import해서 쓴다):
+
+```bash
+./.venv-fla/bin/python capture_qwen35_fx_fla_gpu.py --kernels fla --require-fla \
+    --seq-len 128 --mode both --out dumps/qwen35_4b_s128_fla_gpu
+
+# 같은 GPU·같은 가중치의 torch 참조 커널 베이스라인
+./.venv-fla/bin/python capture_qwen35_fx_fla_gpu.py --kernels torch \
+    --seq-len 128 --mode both --out dumps/qwen35_4b_s128_torch_gpu
+
+./.venv-fla/bin/python compare_kernel_paths.py \
+    dumps/qwen35_4b_s128_fla_gpu dumps/qwen35_4b_s128_torch_gpu --level aten
+```
+
+**python 3.11+ 필요** (3.10에서는 `import fla`가 깨진다) — 이유·환경 구성·결과는 전부
+[`docs/fla_gpu.md`](docs/fla_gpu.md).
 
 ---
 

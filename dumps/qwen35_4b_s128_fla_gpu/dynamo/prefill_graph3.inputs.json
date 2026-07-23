@@ -1,0 +1,58 @@
+[
+  {
+    "index": 0,
+    "shape": [
+      "1",
+      "128",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 1,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 2,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 3,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 4,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 5,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  }
+]

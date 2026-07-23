@@ -1,0 +1,233 @@
+[
+  {
+    "name": "arg0_1",
+    "op": "placeholder",
+    "target": "placeholder",
+    "args": [],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "2560"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "arg1_1",
+    "op": "placeholder",
+    "target": "placeholder",
+    "args": [],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "2560"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "_to_copy",
+    "op": "call_function",
+    "target": "torch._ops.aten._to_copy.default",
+    "args": [
+      "arg0_1"
+    ],
+    "kwargs": {
+      "dtype": "torch.float32"
+    },
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "2560"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "pow_1",
+    "op": "call_function",
+    "target": "torch._ops.aten.pow.Tensor_Scalar",
+    "args": [
+      "_to_copy",
+      "2"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "2560"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "mean",
+    "op": "call_function",
+    "target": "torch._ops.aten.mean.dim",
+    "args": [
+      "pow_1",
+      "[-1]",
+      "True"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "1"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "add",
+    "op": "call_function",
+    "target": "torch._ops.aten.add.Tensor",
+    "args": [
+      "mean",
+      "1e-06"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "1"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "rsqrt",
+    "op": "call_function",
+    "target": "torch._ops.aten.rsqrt.default",
+    "args": [
+      "add"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "1"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "mul",
+    "op": "call_function",
+    "target": "torch._ops.aten.mul.Tensor",
+    "args": [
+      "_to_copy",
+      "rsqrt"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "2560"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "_to_copy_1",
+    "op": "call_function",
+    "target": "torch._ops.aten._to_copy.default",
+    "args": [
+      "arg1_1"
+    ],
+    "kwargs": {
+      "dtype": "torch.float32"
+    },
+    "meta": {
+      "shape": [
+        "2560"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "add_1",
+    "op": "call_function",
+    "target": "torch._ops.aten.add.Tensor",
+    "args": [
+      "_to_copy_1",
+      "1.0"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "2560"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "mul_1",
+    "op": "call_function",
+    "target": "torch._ops.aten.mul.Tensor",
+    "args": [
+      "mul",
+      "add_1"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "2560"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "_to_copy_2",
+    "op": "call_function",
+    "target": "torch._ops.aten._to_copy.default",
+    "args": [
+      "mul_1"
+    ],
+    "kwargs": {
+      "dtype": "torch.bfloat16",
+      "layout": "torch.strided",
+      "device": "cuda:0"
+    },
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "2560"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "output",
+    "op": "output",
+    "target": "output",
+    "args": [
+      "(_to_copy_2,)"
+    ],
+    "kwargs": {},
+    "meta": null
+  }
+]

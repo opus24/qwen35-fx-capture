@@ -1,0 +1,52 @@
+[
+  {
+    "index": 0,
+    "shape": [
+      "1",
+      "32",
+      "128",
+      "128"
+    ],
+    "dtype": "torch.float32",
+    "device": "cuda:0"
+  },
+  {
+    "index": 1,
+    "shape": [
+      "1",
+      "128",
+      "32",
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 2,
+    "shape": [
+      "1",
+      "128",
+      "32",
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 3,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 4,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  }
+]

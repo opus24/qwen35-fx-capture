@@ -1,0 +1,239 @@
+[
+  {
+    "name": "batch_arange",
+    "op": "call_function",
+    "target": "torch.arange",
+    "args": [
+      "1"
+    ],
+    "kwargs": {
+      "device": "cuda:0"
+    },
+    "meta": {
+      "shape": [
+        "1"
+      ],
+      "dtype": "torch.int64",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "head_arange",
+    "op": "call_function",
+    "target": "torch.arange",
+    "args": [
+      "1"
+    ],
+    "kwargs": {
+      "device": "cuda:0"
+    },
+    "meta": {
+      "shape": [
+        "1"
+      ],
+      "dtype": "torch.int64",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "arange_2",
+    "op": "call_function",
+    "target": "torch.arange",
+    "args": [
+      "128"
+    ],
+    "kwargs": {
+      "device": "cuda:0"
+    },
+    "meta": {
+      "shape": [
+        "128"
+      ],
+      "dtype": "torch.int64",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "q_arange",
+    "op": "call_function",
+    "target": "_operator.add",
+    "args": [
+      "arange_2",
+      "0"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "128"
+      ],
+      "dtype": "torch.int64",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "arange_3",
+    "op": "call_function",
+    "target": "torch.arange",
+    "args": [
+      "128"
+    ],
+    "kwargs": {
+      "device": "cuda:0"
+    },
+    "meta": {
+      "shape": [
+        "128"
+      ],
+      "dtype": "torch.int64",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "kv_arange",
+    "op": "call_function",
+    "target": "_operator.add",
+    "args": [
+      "arange_3",
+      "0"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "128"
+      ],
+      "dtype": "torch.int64",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "q_indices",
+    "op": "call_function",
+    "target": "_operator.getitem",
+    "args": [
+      "q_arange",
+      "(None, None, slice(None, None, None), None)"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "1",
+        "128",
+        "1"
+      ],
+      "dtype": "torch.int64",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "kv_indices",
+    "op": "call_function",
+    "target": "_operator.getitem",
+    "args": [
+      "kv_arange",
+      "(None, None, None, slice(None, None, None))"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "1",
+        "1",
+        "128"
+      ],
+      "dtype": "torch.int64",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "attention_mask",
+    "op": "call_function",
+    "target": "_operator.le",
+    "args": [
+      "kv_indices",
+      "q_indices"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "1",
+        "128",
+        "128"
+      ],
+      "dtype": "torch.bool",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "attention_mask_1",
+    "op": "call_method",
+    "target": "expand",
+    "args": [
+      "attention_mask",
+      "1",
+      "-1",
+      "128",
+      "128"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "1",
+        "128",
+        "128"
+      ],
+      "dtype": "torch.bool",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "tensor",
+    "op": "call_function",
+    "target": "torch.tensor",
+    "args": [
+      "0.0"
+    ],
+    "kwargs": {
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16"
+    },
+    "meta": {
+      "shape": [],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "mask",
+    "op": "call_function",
+    "target": "torch.where",
+    "args": [
+      "attention_mask_1",
+      "tensor",
+      "-3.3895313892515355e+38"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "1",
+        "128",
+        "128"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "output",
+    "op": "output",
+    "target": "output",
+    "args": [
+      "(mask,)"
+    ],
+    "kwargs": {},
+    "meta": null
+  }
+]

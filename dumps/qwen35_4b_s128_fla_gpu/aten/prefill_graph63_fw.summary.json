@@ -1,0 +1,13 @@
+{
+  "name": "prefill_graph63_fw",
+  "dir": "/root/real_root/qwen35_fx_capture/dumps/qwen35_4b_s128_fla_gpu/aten",
+  "num_nodes": 8,
+  "num_placeholders": 2,
+  "num_call_function": 5,
+  "op_counts": {
+    "torch._ops.aten.view.default": 2,
+    "torch._ops.aten.slice.Tensor": 1,
+    "torch._ops.aten.permute.default": 1,
+    "torch._ops.aten.mm.default": 1
+  }
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "arg0_1",
+    "op": "placeholder",
+    "target": "placeholder",
+    "args": [],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "8192",
+        "128"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "empty_permuted",
+    "op": "call_function",
+    "target": "torch._ops.aten.empty_permuted.default",
+    "args": [
+      "[1, 8192, 128]",
+      "[0, 2, 1]"
+    ],
+    "kwargs": {
+      "dtype": "torch.bfloat16",
+      "layout": "torch.strided",
+      "device": "cuda:0",
+      "pin_memory": "False"
+    },
+    "meta": {
+      "shape": [
+        "1",
+        "8192",
+        "128"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "output",
+    "op": "output",
+    "target": "output",
+    "args": [
+      "(empty_permuted,)"
+    ],
+    "kwargs": {},
+    "meta": null
+  }
+]

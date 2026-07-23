@@ -1,0 +1,46 @@
+[
+  {
+    "name": "l_x_",
+    "op": "placeholder",
+    "target": "placeholder",
+    "args": [],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "8192",
+        "128"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "out",
+    "op": "call_function",
+    "target": "torch.empty_like",
+    "args": [
+      "l_x_"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "8192",
+        "128"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "output",
+    "op": "output",
+    "target": "output",
+    "args": [
+      "(out,)"
+    ],
+    "kwargs": {},
+    "meta": null
+  }
+]

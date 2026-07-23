@@ -1,0 +1,325 @@
+[
+  {
+    "name": "l_hidden_states_",
+    "op": "placeholder",
+    "target": "placeholder",
+    "args": [],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "2560"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "l_self_modules_in_proj_qkv_parameters_weight_",
+    "op": "placeholder",
+    "target": "placeholder",
+    "args": [],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "8192",
+        "2560"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "l_self_modules_in_proj_z_parameters_weight_",
+    "op": "placeholder",
+    "target": "placeholder",
+    "args": [],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "4096",
+        "2560"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "l_self_modules_in_proj_b_parameters_weight_",
+    "op": "placeholder",
+    "target": "placeholder",
+    "args": [],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "32",
+        "2560"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "l_self_modules_in_proj_a_parameters_weight_",
+    "op": "placeholder",
+    "target": "placeholder",
+    "args": [],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "32",
+        "2560"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "l_self_modules_conv1d_parameters_weight_",
+    "op": "placeholder",
+    "target": "placeholder",
+    "args": [],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "8192",
+        "1",
+        "4"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "mixed_qkv",
+    "op": "call_function",
+    "target": "torch._C._nn.linear",
+    "args": [
+      "l_hidden_states_",
+      "l_self_modules_in_proj_qkv_parameters_weight_",
+      "None"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "8192"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "mixed_qkv_1",
+    "op": "call_method",
+    "target": "transpose",
+    "args": [
+      "mixed_qkv",
+      "1",
+      "2"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "8192",
+        "128"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "z",
+    "op": "call_function",
+    "target": "torch._C._nn.linear",
+    "args": [
+      "l_hidden_states_",
+      "l_self_modules_in_proj_z_parameters_weight_",
+      "None"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "4096"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "z_1",
+    "op": "call_method",
+    "target": "reshape",
+    "args": [
+      "z",
+      "1",
+      "128",
+      "-1",
+      "128"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "32",
+        "128"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "b",
+    "op": "call_function",
+    "target": "torch._C._nn.linear",
+    "args": [
+      "l_hidden_states_",
+      "l_self_modules_in_proj_b_parameters_weight_",
+      "None"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "32"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "a",
+    "op": "call_function",
+    "target": "torch._C._nn.linear",
+    "args": [
+      "l_hidden_states_",
+      "l_self_modules_in_proj_a_parameters_weight_",
+      "None"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "32"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "new_conv_state",
+    "op": "call_function",
+    "target": "torch._C._nn.pad",
+    "args": [
+      "mixed_qkv_1",
+      "(-124, 0)",
+      "constant",
+      "None"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "8192",
+        "4"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "zeros",
+    "op": "call_function",
+    "target": "torch.zeros",
+    "args": [
+      "(1, 8192, 4)"
+    ],
+    "kwargs": {
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    },
+    "meta": {
+      "shape": [
+        "1",
+        "8192",
+        "4"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "getitem",
+    "op": "call_function",
+    "target": "_operator.getitem",
+    "args": [
+      "new_conv_state",
+      "(Ellipsis, slice(-4, None, None))"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "8192",
+        "4"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "copy_",
+    "op": "call_method",
+    "target": "copy_",
+    "args": [
+      "zeros",
+      "getitem"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "8192",
+        "4"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "squeeze",
+    "op": "call_method",
+    "target": "squeeze",
+    "args": [
+      "l_self_modules_conv1d_parameters_weight_",
+      "1"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "8192",
+        "4"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "output",
+    "op": "output",
+    "target": "output",
+    "args": [
+      "(mixed_qkv_1, squeeze, z_1, b, a, zeros)"
+    ],
+    "kwargs": {},
+    "meta": null
+  }
+]

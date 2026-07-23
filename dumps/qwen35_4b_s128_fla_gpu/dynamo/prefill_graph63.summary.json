@@ -1,0 +1,11 @@
+{
+  "name": "prefill_graph63",
+  "dir": "/root/real_root/qwen35_fx_capture/dumps/qwen35_4b_s128_fla_gpu/dynamo",
+  "num_nodes": 5,
+  "num_placeholders": 2,
+  "num_call_function": 2,
+  "op_counts": {
+    "_operator.getitem": 1,
+    "torch._C._nn.linear": 1
+  }
+}

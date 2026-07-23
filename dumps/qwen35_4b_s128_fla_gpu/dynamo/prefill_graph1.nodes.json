@@ -1,0 +1,457 @@
+[
+  {
+    "name": "l_position_ids_",
+    "op": "placeholder",
+    "target": "placeholder",
+    "args": [],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "3",
+        "1",
+        "128"
+      ],
+      "dtype": "torch.int64",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "l_self_buffers_inv_freq_",
+    "op": "placeholder",
+    "target": "placeholder",
+    "args": [],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "32"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "getitem",
+    "op": "call_function",
+    "target": "_operator.getitem",
+    "args": [
+      "l_self_buffers_inv_freq_",
+      "(None, None, slice(None, None, None), None)"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "1",
+        "32",
+        "1"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "float_1",
+    "op": "call_method",
+    "target": "float",
+    "args": [
+      "getitem"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "1",
+        "32",
+        "1"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "expand",
+    "op": "call_method",
+    "target": "expand",
+    "args": [
+      "float_1",
+      "3",
+      "1",
+      "-1",
+      "1"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "3",
+        "1",
+        "32",
+        "1"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "inv_freq_expanded",
+    "op": "call_method",
+    "target": "to",
+    "args": [
+      "expand",
+      "cuda:0"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "3",
+        "1",
+        "32",
+        "1"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "getitem_1",
+    "op": "call_function",
+    "target": "_operator.getitem",
+    "args": [
+      "l_position_ids_",
+      "(slice(None, None, None), slice(None, None, None), None, slice(None, None, None))"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "3",
+        "1",
+        "1",
+        "128"
+      ],
+      "dtype": "torch.int64",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "position_ids_expanded",
+    "op": "call_method",
+    "target": "float",
+    "args": [
+      "getitem_1"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "3",
+        "1",
+        "1",
+        "128"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "float_3",
+    "op": "call_method",
+    "target": "float",
+    "args": [
+      "inv_freq_expanded"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "3",
+        "1",
+        "32",
+        "1"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "float_4",
+    "op": "call_method",
+    "target": "float",
+    "args": [
+      "position_ids_expanded"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "3",
+        "1",
+        "1",
+        "128"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "matmul",
+    "op": "call_function",
+    "target": "_operator.matmul",
+    "args": [
+      "float_3",
+      "float_4"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "3",
+        "1",
+        "32",
+        "128"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "freqs",
+    "op": "call_method",
+    "target": "transpose",
+    "args": [
+      "matmul",
+      "2",
+      "3"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "3",
+        "1",
+        "128",
+        "32"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "freqs_t",
+    "op": "call_function",
+    "target": "_operator.getitem",
+    "args": [
+      "freqs",
+      "0"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "32"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "getitem_3",
+    "op": "call_function",
+    "target": "_operator.getitem",
+    "args": [
+      "freqs",
+      "(1, Ellipsis, slice(1, 33, 3))"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "11"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "setitem",
+    "op": "call_function",
+    "target": "_operator.setitem",
+    "args": [
+      "freqs_t",
+      "(Ellipsis, slice(1, 33, 3))",
+      "getitem_3"
+    ],
+    "kwargs": {},
+    "meta": null
+  },
+  {
+    "name": "getitem_4",
+    "op": "call_function",
+    "target": "_operator.getitem",
+    "args": [
+      "freqs",
+      "(2, Ellipsis, slice(2, 30, 3))"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "10"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "setitem_1",
+    "op": "call_function",
+    "target": "_operator.setitem",
+    "args": [
+      "freqs_t",
+      "(Ellipsis, slice(2, 30, 3))",
+      "getitem_4"
+    ],
+    "kwargs": {},
+    "meta": null
+  },
+  {
+    "name": "emb",
+    "op": "call_function",
+    "target": "torch.cat",
+    "args": [
+      "(freqs_t, freqs_t)"
+    ],
+    "kwargs": {
+      "dim": "-1"
+    },
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "64"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "cos",
+    "op": "call_method",
+    "target": "cos",
+    "args": [
+      "emb"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "64"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "cos_1",
+    "op": "call_function",
+    "target": "_operator.mul",
+    "args": [
+      "cos",
+      "1.0"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "64"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "sin",
+    "op": "call_method",
+    "target": "sin",
+    "args": [
+      "emb"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "64"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "sin_1",
+    "op": "call_function",
+    "target": "_operator.mul",
+    "args": [
+      "sin",
+      "1.0"
+    ],
+    "kwargs": {},
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "64"
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "to_1",
+    "op": "call_method",
+    "target": "to",
+    "args": [
+      "cos_1"
+    ],
+    "kwargs": {
+      "dtype": "torch.bfloat16"
+    },
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "64"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "to_2",
+    "op": "call_method",
+    "target": "to",
+    "args": [
+      "sin_1"
+    ],
+    "kwargs": {
+      "dtype": "torch.bfloat16"
+    },
+    "meta": {
+      "shape": [
+        "1",
+        "128",
+        "64"
+      ],
+      "dtype": "torch.bfloat16",
+      "device": "cuda:0"
+    }
+  },
+  {
+    "name": "output",
+    "op": "output",
+    "target": "output",
+    "args": [
+      "(to_1, to_2)"
+    ],
+    "kwargs": {},
+    "meta": null
+  }
+]

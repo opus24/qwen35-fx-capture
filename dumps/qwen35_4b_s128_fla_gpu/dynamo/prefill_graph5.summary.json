@@ -1,0 +1,21 @@
+{
+  "name": "prefill_graph5",
+  "dir": "/root/real_root/qwen35_fx_capture/dumps/qwen35_4b_s128_fla_gpu/dynamo",
+  "num_nodes": 24,
+  "num_placeholders": 5,
+  "num_call_function": 8,
+  "op_counts": {
+    "_operator.getitem": 3,
+    "reshape": 3,
+    "float": 2,
+    "repeat_interleave": 2,
+    "transpose": 1,
+    "torch.functional.split": 1,
+    "sigmoid": 1,
+    "exp": 1,
+    "_operator.neg": 1,
+    "_operator.add": 1,
+    "torch._C._nn.softplus": 1,
+    "_operator.mul": 1
+  }
+}

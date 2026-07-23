@@ -1,0 +1,19 @@
+{
+  "name": "prefill_graph56",
+  "dir": "/root/real_root/qwen35_fx_capture/dumps/qwen35_4b_s128_fla_gpu/dynamo",
+  "num_nodes": 23,
+  "num_placeholders": 5,
+  "num_call_function": 7,
+  "op_counts": {
+    "reshape": 6,
+    "contiguous": 3,
+    "torch.zeros_like": 1,
+    "copy_": 1,
+    "torch._C._cuda_exchangeDevice": 1,
+    "torch.empty_like": 1,
+    "torch.empty": 1,
+    "torch.ops.higher_order.triton_kernel_wrapper_mutation": 1,
+    "torch._C._cuda_maybeExchangeDevice": 1,
+    "torch._C._nn.linear": 1
+  }
+}

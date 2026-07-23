@@ -1,0 +1,138 @@
+[
+  {
+    "index": 0,
+    "shape": [
+      "1",
+      "128",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 1,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 2,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 3,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 4,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 5,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 6,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 7,
+    "shape": [
+      "1",
+      "128",
+      "64"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 8,
+    "shape": [
+      "1",
+      "128",
+      "64"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 9,
+    "shape": [
+      "1",
+      "1",
+      "128",
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 10,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 11,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 12,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 13,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  },
+  {
+    "index": 14,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0"
+  }
+]
