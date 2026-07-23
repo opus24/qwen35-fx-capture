@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+
+# readable.py와 내용이 겹치는데 57MB라 저장소에서만 제외 (실행하면 생성된다)
+dumps/**/*.tabular.txt
+
+# 스모크 / 덤프방식 검증용 임시 산출물
+dumps/opt_check/
+dumps/inductor_check/
+dumps/full_run.log
+*.swp
+*.swo

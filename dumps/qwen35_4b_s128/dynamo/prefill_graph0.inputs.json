@@ -1,0 +1,3733 @@
+[
+  {
+    "index": 0,
+    "shape": [
+      "1",
+      "128"
+    ],
+    "dtype": "torch.int64",
+    "device": "cpu"
+  },
+  {
+    "index": 1,
+    "shape": [
+      "248320",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 2,
+    "shape": [
+      "1",
+      "128"
+    ],
+    "dtype": "torch.int64",
+    "device": "cpu"
+  },
+  {
+    "index": 3,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 4,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 5,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 6,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 7,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 8,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 9,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 10,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 11,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 12,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 13,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 14,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 15,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 16,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 17,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 18,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 19,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 20,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 21,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 22,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 23,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 24,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 25,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 26,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 27,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 28,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 29,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 30,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 31,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 32,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 33,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 34,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 35,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 36,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 37,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 38,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 39,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 40,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 41,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 42,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 43,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 44,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 45,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 46,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 47,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 48,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 49,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 50,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 51,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 52,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 53,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 54,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 55,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 56,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 57,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 58,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 59,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 60,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 61,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 62,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 63,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 64,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 65,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 66,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 67,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 68,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 69,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 70,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 71,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 72,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 73,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 74,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 75,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 76,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 77,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 78,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 79,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 80,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 81,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 82,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 83,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 84,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 85,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 86,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 87,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 88,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 89,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 90,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 91,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 92,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 93,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 94,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 95,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 96,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 97,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 98,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 99,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 100,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 101,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 102,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 103,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 104,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 105,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 106,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 107,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 108,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 109,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 110,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 111,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 112,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 113,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 114,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 115,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 116,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 117,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 118,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 119,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 120,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 121,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 122,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 123,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 124,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 125,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 126,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 127,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 128,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 129,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 130,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 131,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 132,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 133,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 134,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 135,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 136,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 137,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 138,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 139,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 140,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 141,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 142,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 143,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 144,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 145,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 146,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 147,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 148,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 149,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 150,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 151,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 152,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 153,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 154,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 155,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 156,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 157,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 158,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 159,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 160,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 161,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 162,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 163,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 164,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 165,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 166,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 167,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 168,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 169,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 170,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 171,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 172,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 173,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 174,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 175,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 176,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 177,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 178,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 179,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 180,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 181,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 182,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 183,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 184,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 185,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 186,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 187,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 188,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 189,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 190,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 191,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 192,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 193,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 194,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 195,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 196,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 197,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 198,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 199,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 200,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 201,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 202,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 203,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 204,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 205,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 206,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 207,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 208,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 209,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 210,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 211,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 212,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 213,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 214,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 215,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 216,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 217,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 218,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 219,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 220,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 221,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 222,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 223,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 224,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 225,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 226,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 227,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 228,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 229,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 230,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 231,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 232,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 233,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 234,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 235,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 236,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 237,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 238,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 239,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 240,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 241,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 242,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 243,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 244,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 245,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 246,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 247,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 248,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 249,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 250,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 251,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 252,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 253,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 254,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 255,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 256,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 257,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 258,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 259,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 260,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 261,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 262,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 263,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 264,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 265,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 266,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 267,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 268,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 269,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 270,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 271,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 272,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 273,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 274,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 275,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 276,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 277,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 278,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 279,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 280,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 281,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 282,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 283,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 284,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 285,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 286,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 287,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 288,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 289,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 290,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 291,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 292,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 293,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 294,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 295,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 296,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 297,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 298,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 299,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 300,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 301,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 302,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 303,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 304,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 305,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 306,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 307,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 308,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 309,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 310,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 311,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 312,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 313,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 314,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 315,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 316,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 317,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 318,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 319,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 320,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 321,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 322,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 323,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 324,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 325,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 326,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 327,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 328,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 329,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 330,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 331,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 332,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 333,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 334,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 335,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 336,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 337,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 338,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 339,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 340,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 341,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 342,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 343,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 344,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 345,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 346,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 347,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 348,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 349,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 350,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 351,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 352,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 353,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 354,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 355,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 356,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 357,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 358,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 359,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 360,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 361,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 362,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 363,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 364,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 365,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 366,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 367,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 368,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 369,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 370,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 371,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 372,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 373,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 374,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 375,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 376,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 377,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 378,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 379,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 380,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 381,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 382,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 383,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 384,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 385,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 386,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 387,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 388,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 389,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 390,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 391,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 392,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 393,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 394,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 395,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 396,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 397,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 398,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 399,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 400,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 401,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 402,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 403,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 404,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 405,
+    "shape": [
+      "4096",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 406,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 407,
+    "shape": [
+      "32",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 408,
+    "shape": [
+      "8192",
+      "1",
+      "4"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 409,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 410,
+    "shape": [
+      "32"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 411,
+    "shape": [
+      "128"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 412,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 413,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 414,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 415,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 416,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 417,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 418,
+    "shape": [
+      "8192",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 419,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 420,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 421,
+    "shape": [
+      "256"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 422,
+    "shape": [
+      "1024",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 423,
+    "shape": [
+      "2560",
+      "4096"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 424,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 425,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 426,
+    "shape": [
+      "9216",
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 427,
+    "shape": [
+      "2560",
+      "9216"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  },
+  {
+    "index": 428,
+    "shape": [
+      "2560"
+    ],
+    "dtype": "torch.bfloat16",
+    "device": "cpu"
+  }
+]
